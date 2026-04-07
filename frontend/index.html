@@ -1,1 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Tracker</title>
+</head>
+<body>
 
+<h1>Job Tracker App</h1>
+
+<h2>Add Job</h2>
+<input type="text" id="company" placeholder="Company Name">
+<input type="text" id="role" placeholder="Role">
+<button onclick="addJob()">Add Job</button>
+
+<h2>Job List</h2>
+<ul id="jobList"></ul>
+
+<script>
+
+const API_URL = "http://127.0.0.1:5000"; // backend URL
+
+// Add Job
+function addJob() {
+    const company = document.getElementById("company").value;
+    const role = document.getElementById("role").value;
+
+    fetch(`${API_URL}/jobs`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ company, role })
+    })
+    .then(res => res.json())
+    .then(data => {
+        console.log(data);
+        loadJobs();
+    });
+}
+
+// Load Jobs
+function loadJobs() {
+    fetch(`${API_URL}/jobs`)
+    .then(res => res.json())
+    .then(data => {
+        const list = document.getElementById("jobList");
+        list.innerHTML = "";
+
+        data.jobs.forEach(job => {
+            const li = document.createElement("li");
+            li.textContent = `${job.company} - ${job.role}`;
+            list.appendChild(li);
+        });
+    });
+}
+
+// Load jobs when page loads
+window.onload = loadJobs;
+
+</script>
+
+</body>
+</html>
