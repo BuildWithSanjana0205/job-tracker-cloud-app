@@ -27,5 +27,37 @@ Issues Faced & Resolved:
    - Reason: Frontend (running on http://127.0.0.1:5500) and backend (http://127.0.0.1:5000) are different origins, and browser blocks such cross-origin requests by default
    - Solution: Installed flask-cors and enabled CORS in backend using CORS(app)
 
+Day 3 - Dockerization & Container Setup
+
+- Understood Docker fundamentals (Dockerfile, Image, Container)
+- Created Dockerfile for Flask backend
+- Defined base image, working directory, dependencies, and startup command
+- Built Docker image using docker build command
+- Ran Docker container using port mapping (-p 5000:5000)
+- Connected containerized backend with frontend application
+- Successfully tested API via browser (http://127.0.0.1:5000/jobs)
+- Achieved working flow: Frontend (5500) → Docker Backend (5000)
+
+Issues Faced & Resolved:
+
+- Backend Not Accessible from Browser (Docker)
+- Problem: API was not reachable after running container
+- Reason: Flask app was running on 127.0.0.1 inside container (only accessible internally)
+- Solution: Updated app to run on host='0.0.0.0' to allow external access
+
+Understanding Port Mapping Confusion
+
+- Problem: Confusion between host port and container port
+- Reason: Misunderstanding of how Docker exposes services
+- Solution: Learned -p host_port:container_port mapping concept
+
+Frontend Behavior Difference (file:// vs http://)
+
+- Problem: Frontend worked when opened directly but not in server mode
+- Reason: Browser treats file:// and http:// differently (CORS + request handling)
+- Solution: Used python -m http.server to simulate real-world frontend hosting
+
+🚀 Outcome:
+Backend successfully containerized and running independently in Docker with proper frontend integration.
 
 
