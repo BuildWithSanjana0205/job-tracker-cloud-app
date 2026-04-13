@@ -1,85 +1,44 @@
-# 🚀  Job Tracker App (Cloud Project)
-## 📌 About the Project
+# 🚀 Job Tracker App: Cloud-Native DevOps Journey
 
-This is a cloud-based Job Tracker application.
+[![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)](https://aws.amazon.com/)
+[![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)](https://www.terraform.io/)
+[![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+[![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
 
-The frontend is hosted on Amazon S3, and the backend runs on an EC2 instance using Docker containers. The application interacts with a relational database (RDS) to store and retrieve job-related data.
+## 📌 Project Overview
+A production-simulated **Job Tracker Application** designed to solve the chaos of job hunting. This project demonstrates a full journey from local development to a cloud-architected environment on AWS, focusing on **Infrastructure as Code (IaC)**, **Network Security**, and **Containerization**.
 
-This project is part of my journey to learn cloud computing and build real-world AWS architectures.
+## 🛠️ Tech Stack & AWS Services Used
 
----
-
-## ❗ Problem Statement
-
-Managing job applications manually can be confusing and unorganized.
-
-This application aims to:
-
-Track job applications in one place
-Monitor application status
-Store and retrieve data efficiently using cloud services
-
----
-
-##  🎯 Project Goal
-
-To design and implement a scalable, cloud-based application using AWS services and DevOps practices.
+| Category | Technology / Service |
+| :--- | :--- |
+| **Frontend** | HTML5, CSS3, JS (Served via **CloudFront** & **S3**) |
+| **Backend** | Python (**Flask**), **Docker**, **NGINX** (Reverse Proxy) |
+| **Database** | **Amazon RDS** (PostgreSQL/MySQL) |
+| **Networking** | **VPC**, Public/Private Subnets, **IGW**, Route Tables, **NACLs** |
+| **Security** | **AWS Secrets Manager**, **IAM Roles**, **CloudFront OAC** |
+| **Infrastructure** | **Terraform** |
+| **DevOps/CI-CD** | **GitHub Actions**, **Amazon ECR**, **SSM Agent** |
 
 ---
 
-### 🏗️ Architecture Overview
-* Frontend → Hosted on S3
-* Backend → EC2 (Dockerized application)
-* Database → RDS (stores job data)
-* Monitoring → CloudWatch
-* Infrastructure → Terraform
-* CI/CD → Automated deployment pipeline
+## 📊 Documentation & Architecture
+To understand how this project is built for both cost-efficiency and professional scalability, explore the following:
 
----
+*   **[🏗️ Architectural Diagram](./docs/architecture/README.md)** - Visual breakdown of components, security layers, and data flow.
+*   **[🏢 Enterprise vs. Free Tier Analysis](./docs/architecture/enterprise-settings.md)** - How this project scales to a corporate level.
+*   **[📅 Daily Progress Log](./docs/daily-log.md)** - A transparent record of challenges faced and lessons learned.
 
-### 📊 Architecture Diagram
-
-<img width="2254" height="815" alt="diagram-export-05-04-2026-16_43_12" src="https://github.com/user-attachments/assets/73a47228-d85b-4c54-aaae-05976a292023" />
-
----
-
-
-### ⚙️ Tech Stack
-
-* AWS S3
-* AWS EC2
-* Docker
-* AWS RDS
-* AWS CloudWatch
-* Terraform
----
-
-### 🎯 Features (Initial)
-* Add job applications
-* Track application status
-* Store data in database
-* Display data to users
-
----
-
-## 🗂️ Project Structure
-
- 
-```
-job-tracker-app/
-│
-├── frontend/          # S3 hosted frontend (HTML/CSS/JS)
-├── backend/           # API + Dockerized application
-├── infrastructure/    # Terraform scripts
-├── docs/              # Architecture diagrams & documentation
-└── README.md
-```
+## 🚀 Key Features
+- **Containerized Microservices:** Backend runs in Docker for environment parity.
+- **Secure Secret Management:** Database credentials are never hardcoded; they are fetched via AWS Secrets Manager.
+- **Zero-Open-Port Security:** Managing EC2 via AWS Systems Manager (SSM) instead of opening SSH (Port 22).
 
 ---
 
 ## 🛠️ Current Status
 
-🚧 Project in progress — updating daily as I learn and build.# audiobook-library-infrastructure-automation
+🚧 Project in progress — updating daily as I learn and build.
 
 ---
 
