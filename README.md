@@ -35,6 +35,19 @@ To understand how this project is built for both cost-efficiency and professiona
 - **Zero-Open-Port Security:** Managing EC2 via AWS Systems Manager (SSM) instead of opening SSH (Port 22).
 
 ---
+## 🗂️ Project Structure
+```
+job-tracker-app/
+├── docs/
+│   ├── architecture/
+│   │   ├── README.md               # Detailed Diagram Breakdown
+│   │   └── enterprise-settings.md   # Professional vs. Free Tier Comparison
+│   └── daily-log.md                 # ALL days progress in one file
+├── frontend/           # HTML/CSS/JS (S3 Hosted)
+├── backend/            # Flask API (Dockerized)
+├── infrastructure/     # Terraform (IaC)
+└── README.md           # Main Entrance (The "Recruiter" View)
+```
 
 ## 🛠️ Current Status
 
