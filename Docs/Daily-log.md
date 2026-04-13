@@ -60,4 +60,13 @@ Frontend Behavior Difference (file:// vs http://)
 🚀 Outcome:
 Backend successfully containerized and running independently in Docker with proper frontend integration.
 
+### Day 4 - Documentation Overhaul & Architectural Refinement
+- **Goal:** Elevate project presentation to professional standards and bridge the gap between "Learning" and "Enterprise" design.
+- **Achievements:**
+    - **README Reconstruction:** Rewrote the main documentation to be "Recruiter-Ready," using industry-standard badges and clear technical service mapping.
+    - **Architectural Scaling:** Refined the system diagram to include high-value security services like **CloudFront OAC** (Origin Access Control), **AWS Secrets Manager**, and **SSM**.
+    - **System Design Analysis:** Authored a "Professional vs. Free Tier" comparison to demonstrate understanding of High Availability (HA) and Disaster Recovery (DR) concepts.
+    - **Documentation-as-Code:** Organized a structured `docs/` hierarchy to separate architectural logic from daily execution logs.
+- **Challenge:** Translating complex AWS networking concepts (NACLs, IGW, Subnets) into a clean, readable visual and written format.
+- **Outcome:** A repository that not only shows code but proves architectural competency and cost-optimization awareness.
 
