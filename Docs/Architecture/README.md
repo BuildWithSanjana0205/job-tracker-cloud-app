@@ -1,6 +1,7 @@
 # 🗺️ Architectural Diagram Breakdown
+<img width="2502" height="1214" alt="image" src="https://github.com/user-attachments/assets/92998d26-c1a8-48f4-a0e0-f1341f403f53" />
 
-![Architecture Diagram](../../docs/architecture/your-diagram.png)
+
 
 ### The Technical Flow:
 1.  **Traffic Entry:** Users access the app via **AWS CloudFront** (HTTPS).
